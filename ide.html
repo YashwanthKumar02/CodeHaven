@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeHaven</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body style="font-family:monospace; background-color: #ffffff;">
+
+    <div class="header" style="font-family: monospace;" > 🔥 CodeHaven </div>
+    <div class="control-panel">
+        <div class="language">
+        Select Language:
+        &nbsp; &nbsp;
+        <select id="lang" class="languages" onchange="changeLanguage()">
+            <option value="C"> C </option>
+            <option value="C++" selected> C++ </option>
+            <option value="Fortran"> Fortran </option>
+            <option value="Python"> Python </option>
+            <option value="C#"> C# </option>
+            <option value="Ruby"> Ruby </option>
+            <option value="Java"> Java </option>
+        </select>
+        </div>
+        <div class="button-container">
+            <button id="run" onclick="run()" style="font-size: 15px;">▶️ Run (Ctrl + Enter)</button>
+        </div>
+    </div>
+    <hr>
+    <h2>Source code</h2>
+    <br>
+    <div class="editor" id="editor" style="resize: vertical; width: 44.65%;"></div>
+
+    <br>
+    <h2>Input</h2>
+    <br>
+    <textarea id="input" style="width: 44.65%; height: 60%; resize: vertical; font-size: 25px; background-color: #272822; color: lightgrey;"></textarea>
+
+    <br>
+
+    <div class="Output-container">
+    <textarea readonly id="output" style="width: 55%; height: 88%; position: fixed; top: 115px; right: 0px; resize: none; font-size: 25px; background-color: #272822; color: whitesmoke;" placeholder="Your OUTPUT will be displayed here..."></textarea>
+    <div></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/ext-language_tools.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.16.0/theme-monokai.min.js"></script>
+    <script src="https://pagecdn.io/lib/ace/1.4.5/ace.js" integrity="sha256-5Xkhn3k/1rbXB+Q/DX/2RuAtaB4dRRyQvMs83prFjpM=" crossorigin="anonymous"></script>
+    <script src="js/ide.js"></script>
+</body>
+</html>
